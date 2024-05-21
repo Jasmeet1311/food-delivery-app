@@ -5,7 +5,7 @@ import Cart from './pages/Cart/Cart';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import {Routes,Route} from 'react-router-dom';
 import Footer from './components/Footer/Footer';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LoginPopUp from './components/LoginPopUp/LoginPopUp';
 import Verify from './pages/verify/Verify';
 import MyOrders from './pages/myOrders/MyOrders';
@@ -14,6 +14,17 @@ import MyOrders from './pages/myOrders/MyOrders';
 const App = () => {
   const [showLogin, setshowLogin] = useState(false);
   // const [token,setToken] = useState("");
+  useEffect(()=>{
+    if (showLogin) {
+      document.body.style.overflow = 'hidden';
+    }
+    else{
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+  };
+  },[showLogin]);
   return (
     <>
     {showLogin?<LoginPopUp setshowLogin={setshowLogin} />:<></>}

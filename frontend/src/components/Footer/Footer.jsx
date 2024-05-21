@@ -14,7 +14,7 @@ const Footer = () => {
     <path d="M19.5 13V4H20C21.1046 4 22 4.89543 22 6V13H19.5ZM19.5 13V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M4 9V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
 </svg>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste neque voluptates ducimus eum est? Veritatis, ad! Perspiciatis, quasi quae. Beatae voluptatum quis assumenda!</p>
+            <p>Experience quick and reliable food delivery with our app. Browse diverse cuisines, track your order in real-time, and enjoy exclusive deals, all at your fingertips. Delicious meals delivered fast!</p>
             <div className="social-icons">
                 <img src={assets.facebook_icon} alt="facebook" />
                 <img src={assets.twitter_icon} alt="twitter" />
@@ -40,7 +40,8 @@ const Footer = () => {
       </div>
       <hr />
       <p className="footer-copyright">
-        Copyright 2024   &copy;   FoodieHub.com -     All rights reserved
+        {/* Copyright 2024   &copy;   FoodieHub.com -     All rights reserved */}
+        <img src="https://forthebadge.com/images/badges/built-with-love.png" alt="badge" /> - By Jasmeet
       </p>
     </div>
   )
